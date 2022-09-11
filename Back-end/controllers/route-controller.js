@@ -1,5 +1,7 @@
 const route_model = require("../models/route-schema");
 const bus_model = require("../models/bus-schema");
+const class_routine_model = require("../models/class-routine-schema");
+const student_model = require("../models/student-schema");
 const route_controller = {};
 route_controller.create = (req, res, next) => {
   if (req.method != "POST") {
@@ -81,10 +83,7 @@ route_controller.suggest_route = async (req, res, next) => {
     const number_of_students = routes[i].demand[0].students;
     const number_of_staffs = routes[i].demand[0].staffs;
     const number_of_others = routes[i].demand[0].others;
-    let bus_for_teachers = "None";
-    let bus_for_students = "None";
-    let bus_for_staffs = "None";
-    let bus_for_others = "None";
+
     let passengers = [
       { type: "teacher", number: number_of_teachers },
       { type: "students", number: number_of_students },
