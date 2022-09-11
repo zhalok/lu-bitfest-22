@@ -55,7 +55,7 @@ demand for transit for the maximum number of consumers.
         - [x] Full name
         - [x] Contact number
         - [] ~~Account must be confirmed by the Higher Official or Support Team to access the portal~~
-        - [ ] An official/staff can log in to their portal by **any** of the following:
+        - [x] An official/staff can log in to their portal by **any** of the following:
             - [x] Combination of username & password
             - [ ] Mobile number with OTP verification
         - [x] Update Bus inventory with the following information **[Mandatory feature | 5 points]**
