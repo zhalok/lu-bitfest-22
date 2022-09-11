@@ -126,8 +126,8 @@ demand for transit for the maximum number of consumers.
             - [ ] [Exam Routine](https://docs.google.com/spreadsheets/d/1_E9bvZpGL41k3m40PBvWd9l3NCgR0RQn/edit#gid=329530890)
     - [ ] Ability to view the location of a bus with estimated arrival time **[Nice to have | 15 points]**
     - [x] View information about the transport **[Mandatory feature | 5 points]**
-        - [ ] Which buses are allocated in a specific route & timeslot
-        - [ ] Codename or sequence of the buses
+        - [x] Which buses are allocated in a specific route & timeslot
+        - [x] Codename or sequence of the buses
 
 3. Prepare a dummy dataset with the following requirements **[Mandatory feature | 7 points]**
     - [ ] 4 transport routes
