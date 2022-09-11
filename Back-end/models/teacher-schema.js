@@ -8,7 +8,7 @@ const teacher_schema = new mongoose.Schema({
   password: { type: String, required: true },
   role: { type: String, required: true },
   pickup: { type: String, required: true },
-  code_name: { type: Number, required: true },
+  code_name: { type: String, required: true },
   designation: { type: String, required: true },
   department: { type: String, required: true },
 });

@@ -51,7 +51,7 @@ app.use("/api/admin", admin_route);
 app.use("/api/bus", bus_route);
 app.use("/api/route", route_route);
 app.use("/api/students", student_route);
-
+app.use("/api/teachers", teacher_route);
 app.use((error, req, res, next) => {
   if (res.headerSent) {
     return next(error);

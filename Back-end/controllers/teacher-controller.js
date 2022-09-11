@@ -16,7 +16,7 @@ teacher_controller.add = async (req, res, next) => {
     department,
   } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
-  student_model.find({ id_number }, (err, data) => {
+  teacher_model.find({ id_number }, (err, data) => {
     if (err) next(err);
     else {
       if (data.length != 0) res.json("The user is already registered");
@@ -50,7 +50,7 @@ teacher_controller.add = async (req, res, next) => {
 teacher_controller.authentication = async (req, res, next) => {
   const { username, password } = req.body;
 
-  user_model.find({ username }, (err, data) => {
+  teacher_model.find({ username }, (err, data) => {
     if (err) {
       next(err);
       return;
@@ -84,7 +84,7 @@ teacher_controller.authentication = async (req, res, next) => {
 };
 
 teacher_controller.get = (req, res, next) => {
-  student_model.find({}, (err, data) => {
+  teacher_model.find({}, (err, data) => {
     if (err) next(err);
     else res.status(200).json(data);
   });
@@ -100,7 +100,7 @@ teacher_controller.update = (req, res, next) => {
   let updated_data = {};
   updated_data[field] = value;
 
-  student_model.findByIdAndUpdate(
+  teacher_model.findByIdAndUpdate(
     { _id },
     updated_data,
     { new: true },
