@@ -56,7 +56,7 @@ admin_controller.authentication = async (req, res, next) => {
               email,
               username,
               role,
-              type: "Admin",
+              type: "admin",
             });
             res.status(200).json({ message: "User Authenticated", token });
           } else {
