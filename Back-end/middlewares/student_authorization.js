@@ -9,7 +9,8 @@ const user_authorization = (req, res, next) => {
   }
   const decoded_token = validate_token(token);
   if (decoded_token) {
-    if (decoded_token.type == "user" || decoded_token.type == "admin") next();
+    if (decoded_token.type == "student" || decoded_token.type == "admin")
+      next();
   } else {
     res.status(401).json({ message: "Unauthorized request" });
     return;
