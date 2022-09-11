@@ -10,8 +10,6 @@ auth.generate_token = (payload) => {
 auth.validate_token = (token) => {
   try {
     var decoded = jwt.verify(token, "03041959");
-    // return decoded;
-    // console.log(decoded);
     const cur_time = Math.floor(Date.now() / 1000);
     if (cur_time > decoded.exp) return false;
     else return decoded;

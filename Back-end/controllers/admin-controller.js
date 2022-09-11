@@ -1,4 +1,4 @@
-const admin_model = require("../models/admin-model");
+const admin_model = require("../models/admin-schema");
 const bcrypt = require("bcrypt");
 const { generate_token, validate_token } = require("../utils/Auth");
 const admin_controller = {};
@@ -18,7 +18,7 @@ admin_controller.add = async (req, res, next) => {
           username,
           password: hashedPassword,
           role,
-          Verification: "Pending",
+          verified: "Pending",
         });
         new_admin.save((err, data) => {
           if (err) {
@@ -69,7 +69,6 @@ admin_controller.authentication = async (req, res, next) => {
 };
 
 admin_controller.authorization = async (req, res, next) => {
-  // console.log(req.headers);
   const token = req.headers.bearer;
 
   const decoded_token = validate_token(token);
