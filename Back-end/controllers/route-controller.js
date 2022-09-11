@@ -92,10 +92,9 @@ route_controller.suggest_route = async (req, res, next) => {
       { type: "others", number: number_of_others },
     ];
     const suggestion = [];
-    passengers.sort((a, b) => a.number - b.number);
-    buses.sort((a, b) => a.capacity - b.capacity);
-    // console.log(passengers);
-    // console.log(buses);
+    passengers.sort((a, b) => b.number - a.number);
+    buses.sort((a, b) => b.capacity - a.capacity);
+
     for (let j = 0; j < passengers.length; j++) {
       for (let k = 0; k < buses.length; k++) {
         if (

@@ -1,7 +1,7 @@
-const student_model = require("../models/student-schema");
+const teacher_model = require("../models/teacher-schema");
 const bcrypt = require("bcrypt");
-const student_controller = {};
-student_controller.add = async (req, res, next) => {
+const teacher_controller = {};
+teacher_controller.add = async (req, res, next) => {
   const {
     name,
     contact,
@@ -11,8 +11,8 @@ student_controller.add = async (req, res, next) => {
     role,
     pickup,
     id_number,
-    batch,
-    section,
+    code_name,
+    designation,
     department,
   } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -21,7 +21,7 @@ student_controller.add = async (req, res, next) => {
     else {
       if (data.length != 0) res.json("The user is already registered");
       else {
-        const new_student = new student_model({
+        const new_teacher = new teacher_model({
           name,
           contact,
           email,
@@ -30,12 +30,12 @@ student_controller.add = async (req, res, next) => {
           role,
           id_number,
           pickup,
-          batch,
-          section,
+          code_name,
+          designation,
           department,
           verified: "Pending",
         });
-        new_student.save((err, data) => {
+        new_teacher.save((err, data) => {
           if (err) {
             next(err);
           } else {
@@ -47,7 +47,7 @@ student_controller.add = async (req, res, next) => {
   });
 };
 
-student_controller.authentication = async (req, res, next) => {
+teacher_controller.authentication = async (req, res, next) => {
   const { username, password } = req.body;
 
   user_model.find({ username }, (err, data) => {
@@ -83,14 +83,14 @@ student_controller.authentication = async (req, res, next) => {
   });
 };
 
-student_controller.get = (req, res, next) => {
+teacher_controller.get = (req, res, next) => {
   student_model.find({}, (err, data) => {
     if (err) next(err);
     else res.status(200).json(data);
   });
 };
 
-student_controller.update = (req, res, next) => {
+teacher_controller.update = (req, res, next) => {
   const { field, value, _id } = req.body;
 
   if (["name", "batch", "section"].indexOf(field) == -1) {
@@ -113,4 +113,4 @@ student_controller.update = (req, res, next) => {
   );
 };
 
-module.exports = student_controller;
+module.exports = teacher_controller;

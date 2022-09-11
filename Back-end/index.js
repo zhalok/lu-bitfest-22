@@ -40,6 +40,7 @@ const admin_route = require("./routes/admin-route");
 const bus_route = require("./routes/bus-route");
 const route_route = require("./routes/route-route");
 const student_route = require("./routes/student-route");
+const teacher_route = require("./routes/teacher-route");
 
 app.all("/", (req, res, next) => {
   console.log("hello");

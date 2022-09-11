@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const student_schema = new mongoose.Schema({
+const teacher_schema = new mongoose.Schema({
   name: { type: String, required: true },
   id_number: { type: String, required: true },
   contact: { type: String, required: true },
@@ -8,9 +8,9 @@ const student_schema = new mongoose.Schema({
   password: { type: String, required: true },
   role: { type: String, required: true },
   pickup: { type: String, required: true },
-  batch: { type: Number, required: true },
-  section: { type: String, required: true },
+  code_name: { type: Number, required: true },
+  designation: { type: String, required: true },
   department: { type: String, required: true },
 });
 
-module.exports = mongoose.model("Students", student_schema);
+module.exports = mongoose.model("Teachers", teacher_schema);
