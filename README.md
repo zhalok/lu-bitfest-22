@@ -51,7 +51,7 @@ demand for transit for the maximum number of consumers.
 ## Requirements
 
 1. **As a Transport Dept. official/staff ability to -**
-    - [-x] Open an account with the following information **[Mandatory feature | 5 points]**
+    - [x] Open an account with the following information **[Mandatory feature | 5 points]**
         - [x] Full name
         - [x] Contact number
         - [] ~~Account must be confirmed by the Higher Official or Support Team to access the portal~~
