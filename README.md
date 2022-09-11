@@ -32,8 +32,8 @@ you did not understand. Let us know, and we will get back to you as soon as we c
 
 ## Instructions
 
-- [ ] Fork this repository
-- [ ] For each major feature create a **branch**
+- [x] Fork this repository
+- [x] For each major feature create a **branch**
 - [ ] After completing each task
     - [ ] Mark the task as done in the requirement section of the **README.md** file by changing the markdown
       syntax: `- [ ]` to `- [x]`
@@ -52,8 +52,8 @@ demand for transit for the maximum number of consumers.
 
 1. **As a Transport Dept. official/staff ability to -**
     - [ ] Open an account with the following information **[Mandatory feature | 5 points]**
-        - [ ] Full name
-        - [ ] Contact number
+        - [x] Full name
+        - [x] Contact number
         - [ ] ~~Account must be confirmed by the Higher Official or Support Team to access the portal~~
         - [ ] An official/staff can log in to their portal by **any** of the following:
             - [ ] Combination of username & password
