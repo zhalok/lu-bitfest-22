@@ -66,17 +66,17 @@ demand for transit for the maximum number of consumers.
                 - [ ] Full Name
                 - [ ] Contact Number
             - [ ] Is Active (ie: a bus could be in maintenance)
-        - [ ] Create/Update routes with the following information **[Mandatory | 5 points]**
-            - [ ] Route number
-            - [ ] Start location
-                - [ ] Label
-                - [ ] Latitude & Longitude
-            - [ ] Start time
+        - [x] Create/Update routes with the following information **[Mandatory | 5 points]**
+            - [x] Route number
+            - [x] Start location
+                - [x] Label
+                - [x] Latitude & Longitude
+            - [x] Start time
         - [ ] Create/Update stoppages with the following information **[Nice to have | 2 points]**
             - [ ] Route number
             - [ ] Label
             - [ ] Latitude & Longitude
-        - [ ] Input the transport demands manually for a specific route & timeslot for the following
+        - [x] Input the transport demands manually for a specific route & timeslot for the following
             - [ ] groups **[Mandatory feature | 6 points]**
             - [ ] Students
             - [ ] Teachers
