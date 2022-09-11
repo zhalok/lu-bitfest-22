@@ -7,8 +7,8 @@ const route_schema = new mongoose.Schema({
     type: [location_schema],
     required: true,
   },
-  start_time: { type: String, required: true },
   demand: [demand_schema],
+  start_time: { type: String, required: true },
 });
 
 module.exports = mongoose.model("Route", route_schema);

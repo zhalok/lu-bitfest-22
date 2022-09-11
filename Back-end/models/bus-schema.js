@@ -6,6 +6,7 @@ const bus_schema = new mongoose.Schema({
   capacity: { type: Number, required: true },
   driver: [driver_schema],
   is_active: { type: Boolean, required: true },
+  // start_time: { type: String, required: true },
 });
 
 module.exports = mongoose.model("Bus", bus_schema);
