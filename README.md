@@ -54,7 +54,7 @@ demand for transit for the maximum number of consumers.
     - [ ] Open an account with the following information **[Mandatory feature | 5 points]**
         - [ ] Full name
         - [ ] Contact number
-        - [ ] Account must be confirmed by the Higher Official or Support Team to access the portal
+        - [ ] ~~Account must be confirmed by the Higher Official or Support Team to access the portal~~
         - [ ] An official/staff can log in to their portal by **any** of the following:
             - [ ] Combination of username & password
             - [ ] Mobile number with OTP verification
@@ -103,7 +103,7 @@ demand for transit for the maximum number of consumers.
             - [ ] Teacher
             - [ ] Staff
         - [ ] Select option for pickup stoppage
-        - [ ] Account must be confirmed by the Higher Official or Support Team to access the portal
+        - [ ] ~~Account must be confirmed by the Higher Official or Support Team to access the portal~~
         - [ ] A consumer can log in to their portal by **any** of the following:
             - [ ] Combination of username & password
             - [ ] Mobile number with OTP verification
