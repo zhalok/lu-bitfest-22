@@ -1,5 +1,5 @@
 const express = require("express");
-const auth = require("../middlewares/Authorization");
+const auth = require("../middlewares/teacher_authorization");
 const teacher_controller = require("../controllers/teacher-controller");
 const router = express.Router();
 router.post("/add", auth, teacher_controller.add);

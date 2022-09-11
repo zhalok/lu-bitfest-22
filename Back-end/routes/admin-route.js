@@ -1,4 +1,5 @@
 const express = require("express");
+const auth = require("../middlewares/Authorization");
 const admin_controller = require("../controllers/admin-controller");
 const router = express.Router();
 router.post("/signup", admin_controller.add);
