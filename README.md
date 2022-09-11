@@ -51,12 +51,12 @@ demand for transit for the maximum number of consumers.
 ## Requirements
 
 1. **As a Transport Dept. official/staff ability to -**
-    - [ ] Open an account with the following information **[Mandatory feature | 5 points]**
+    - [-x] Open an account with the following information **[Mandatory feature | 5 points]**
         - [x] Full name
         - [x] Contact number
-        - [ ] ~~Account must be confirmed by the Higher Official or Support Team to access the portal~~
+        - [] ~~Account must be confirmed by the Higher Official or Support Team to access the portal~~
         - [ ] An official/staff can log in to their portal by **any** of the following:
-            - [ ] Combination of username & password
+            - [x] Combination of username & password
             - [ ] Mobile number with OTP verification
         - [ ] Update Bus inventory with the following information **[Mandatory feature | 5 points]**
             - [ ] License number
