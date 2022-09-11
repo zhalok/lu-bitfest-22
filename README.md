@@ -115,9 +115,9 @@ demand for transit for the maximum number of consumers.
         - [x] Department
         - [x] Code name (ie: XYZ) [It is used in the routine]
         - [x] Designation
-    - [ ] Request seat in a specific route and timeslot **[Mandatory feature | 5 points]**
-        - [ ] A consumer can manually request a seat
-        - [ ] If the requested time is out of schedule, a mandatory Note to mention the reason must be provided
+    - [x] Request seat in a specific route and timeslot **[Mandatory feature | 5 points]**
+        - [x] A consumer can manually request a seat
+        - [x] If the requested time is out of schedule, a mandatory Note to mention the reason must be provided
     - [ ] Automated seat allocation **[Nice to have | 5 points]**
         - [ ] For students, teachers, and staff a request will be applied automatically according to their
           routine/schedule
@@ -125,7 +125,7 @@ demand for transit for the maximum number of consumers.
             - [ ] [Class Routine](https://docs.google.com/spreadsheets/d/1kGY1XLjjdDOeFdTLzxgmQYZtLyKaBOshsJ_6pq0TrwU/edit#gid=712672084)
             - [ ] [Exam Routine](https://docs.google.com/spreadsheets/d/1_E9bvZpGL41k3m40PBvWd9l3NCgR0RQn/edit#gid=329530890)
     - [ ] Ability to view the location of a bus with estimated arrival time **[Nice to have | 15 points]**
-    - [ ] View information about the transport **[Mandatory feature | 5 points]**
+    - [x] View information about the transport **[Mandatory feature | 5 points]**
         - [ ] Which buses are allocated in a specific route & timeslot
         - [ ] Codename or sequence of the buses
 
