@@ -58,7 +58,7 @@ demand for transit for the maximum number of consumers.
         - [ ] An official/staff can log in to their portal by **any** of the following:
             - [x] Combination of username & password
             - [ ] Mobile number with OTP verification
-        - [ ] Update Bus inventory with the following information **[Mandatory feature | 5 points]**
+        - [x] Update Bus inventory with the following information **[Mandatory feature | 5 points]**
             - [ ] License number
             - [ ] Codename (ie: to uniquely identify)
             - [ ] Capacity
