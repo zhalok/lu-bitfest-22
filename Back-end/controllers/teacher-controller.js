@@ -93,7 +93,7 @@ teacher_controller.get = (req, res, next) => {
 teacher_controller.update = (req, res, next) => {
   const { field, value, _id } = req.body;
 
-  if (["name", "batch", "section"].indexOf(field) == -1) {
+  if (["department", "code_name", "designation"].indexOf(field) == -1) {
     res.status(400).json({ message: "wrong update field" });
     return;
   }
