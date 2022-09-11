@@ -38,6 +38,7 @@ mongoose
 
 const admin_route = require("./routes/admin-route");
 const bus_route = require("./routes/bus-route");
+const route_route = require("./routes/route-route");
 
 app.all("/", (req, res, next) => {
   console.log("hello");
@@ -46,6 +47,7 @@ app.all("/", (req, res, next) => {
 
 app.use("/api/admin", admin_route);
 app.use("/api/bus", bus_route);
+app.use("/api/route", route_route);
 
 app.use((error, req, res, next) => {
   if (res.headerSent) {
