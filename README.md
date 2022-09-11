@@ -77,11 +77,11 @@ demand for transit for the maximum number of consumers.
             - [ ] Label
             - [ ] Latitude & Longitude
         - [x] Input the transport demands manually for a specific route & timeslot for the following
-            - [ ] groups **[Mandatory feature | 6 points]**
-            - [ ] Students
-            - [ ] Teachers
-            - [ ] Staff or officials
-            - [ ] Others (ie: in case of any events)
+            - [x] groups **[Mandatory feature | 6 points]**
+            - [x] Students
+            - [x] Teachers
+            - [x] Staff or officials
+            - [x] Others (ie: in case of any events)
         - [ ] Automated transport demand calculation **[Nice to have | 10 points]**
             - [ ] Upload and store schedules (ie: class routine, exam routine)
             - [x] [A sample routine can be downloaded from this link]
