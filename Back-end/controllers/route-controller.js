@@ -10,6 +10,12 @@ route_controller.create = (req, res, next) => {
     route_number,
     start_location,
     start_time,
+    demand: {
+      teachers: 0,
+      students: 0,
+      staffs: 0,
+      others: 0,
+    },
   });
   new_route.save((err, data) => {
     if (err) next(err);
@@ -33,11 +39,11 @@ route_controller.update = (req, res, next) => {
     res.status(405).json({ message: "Wrong method" });
     return;
   }
-  const { route_number, start_location, start_time, _id } = req.body;
+  const { route_number, start_location, start_time, _id, demand } = req.body;
 
   route_model.findByIdAndUpdate(
     { _id },
-    { route_number, start_location, start_time },
+    { route_number, start_location, start_time, demand },
     { new: true },
     (err, data) => {
       if (err) next(err);
