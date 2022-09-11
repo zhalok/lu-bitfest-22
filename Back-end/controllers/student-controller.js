@@ -1,16 +1,26 @@
-const user_model = require("../models/user-schema");
+const student_model = require("../models/student-schema");
 const bcrypt = require("bcrypt");
-const user_controller = {};
-user_controller.add_user = async (req, res, next) => {
-  const { name, contact, email, username, password, role, pickup, id_number } =
-    req.body;
+const student_controller = {};
+student_controller.add = async (req, res, next) => {
+  const {
+    name,
+    contact,
+    email,
+    username,
+    password,
+    role,
+    pickup,
+    id_number,
+    batch,
+    section,
+  } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
-  user_model.find({ id_number }, (err, data) => {
+  student_model.find({ id_number }, (err, data) => {
     if (err) next(err);
     else {
       if (data.length != 0) res.json("The user is already registered");
       else {
-        const new_user = new user_model({
+        const new_student = new student_model({
           name,
           contact,
           email,
@@ -19,9 +29,11 @@ user_controller.add_user = async (req, res, next) => {
           role,
           id_number,
           pickup,
+          batch,
+          section,
           verified: "Pending",
         });
-        new_user.save((err, data) => {
+        new_student.save((err, data) => {
           if (err) {
             next(err);
           } else {
@@ -33,7 +45,7 @@ user_controller.add_user = async (req, res, next) => {
   });
 };
 
-user_controller.authentication = async (req, res, next) => {
+student_controller.authentication = async (req, res, next) => {
   const { username, password } = req.body;
 
   user_model.find({ username }, (err, data) => {
@@ -69,4 +81,34 @@ user_controller.authentication = async (req, res, next) => {
   });
 };
 
-module.exports = user_controller;
+student_controller.get = (req, res, next) => {
+  student_model.find({}, (err, data) => {
+    if (err) next(err);
+    else res.status(200).json(data);
+  });
+};
+
+student_controller.update = (req, res, next) => {
+  const { field, value, _id } = req.body;
+
+  if (["name", "batch", "section"].indexOf(field) == -1) {
+    res.status(400).json({ message: "wrong update field" });
+    return;
+  }
+  let updated_data = {};
+  updated_data[field] = value;
+
+  student_model.findByIdAndUpdate(
+    { _id },
+    updated_data,
+    { new: true },
+    (err, data) => {
+      if (err) next(err);
+      else {
+        res.status(200).json(data);
+      }
+    }
+  );
+};
+
+module.exports = student_controller;
