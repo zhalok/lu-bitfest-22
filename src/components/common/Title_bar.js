@@ -40,7 +40,7 @@ const TitleBar=({page,style,up})=>{
         <div id="titlebar container">
         <div id="title_bar" style={style}>
             <div id="Logo">
-                <div id="mms"><b>mms</b></div>
+                <div id="mms"><b>UTS</b></div>
             </div>
            { page==="landing"?(<div id="buttons">
                 <Link to="/login" id="title_bar_login"><b>Log In</b></Link>
