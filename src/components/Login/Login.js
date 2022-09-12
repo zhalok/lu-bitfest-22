@@ -45,7 +45,7 @@ const Login=()=>{
         <div id="container">
             <TitleBar page="login"/>
             <div id="login">
-                <div id="logintxt">Log in to mms</div>
+                <div id="logintxt">Log in to UTS</div>
                 <input class="logininput" id="email" placeholder="Email"/>
                 <input type="password" class="logininput" id="password" placeholder="password"/>
                 <div id="loginbutton" onClick={loginHandler}>Log in</div>

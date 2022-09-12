@@ -59,6 +59,8 @@ const TitleBar=({page,style,up})=>{
             <div id="clienttabs" class="tabcontainer">
                 <Link to="/studentprofile" class="tab">profile</Link>
                 <Link to="/search" class="tab">Search for Bus</Link>
+                <Link to="/businventory" class="tab">Bus list</Link>
+                
                 
             </div>
             <img src="./pics_icons/profilepic.jpg" id="titlebarimg" onClick={titleImgClick}/>

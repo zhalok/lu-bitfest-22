@@ -85,7 +85,7 @@
 #titlebarclientcontainer {
   display: flex;
   float: right;
-  height: 72px;
+  height: px;
   width: 50%;
 }
 @media (max-width: 900px) {

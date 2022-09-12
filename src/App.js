@@ -40,7 +40,7 @@ function App() {
         <Route path="/signup1" exact element={<SignUp1/>}/>
         <Route path="/signup2" exact element={<SignUpAsWorker/>}/>
         <Route path="/signup3" exact element={<SignUpAsClient/>}/>
-        <Route path="/businvetory" exact element={<BusInventory/>}/>
+        <Route path="/businventory" exact element={<BusInventory/>}/>
         <Route path="/busallocation" exact element={<BusAllocation/>}/>
         <Route path="/estimatedpassenger" exact element={<EstimatedPassenger/>}/>
         <Route path="/consumerrequest" exact element={<ConsumerRequestPage/>}/>
