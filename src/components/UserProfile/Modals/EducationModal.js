@@ -28,7 +28,7 @@ const EducaionModal=({Educations,setEducations})=>{
             <img class ="ModalCloseButton" src="./pics_icons/cancel.png" onClick={hideEducaionModal}/>
         </div>
         <div style={{ margin:"auto",textAlign:"left"}}>
-            <span style={{fontSize:"36px",paddingRight:"8px"}}>Your Educaion</span>
+            <span style={{fontSize:"36px",paddingRight:"8px"}}>Create Route</span>
             <img onClick={()=>{setEditing(false);showCreateEditEducationModal()}} id="addEducaion" style={{width:"38px",height:"38px",cursor:"pointer"}} src="./pics_icons/add.png"/>
             <div>
                 {Educations.map((Education)=>(

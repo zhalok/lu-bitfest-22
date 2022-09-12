@@ -70,13 +70,13 @@ const CreateEditEducationModal=({Educations,setEducations,selectedEducation,setS
         </div>
         <div style={{margin:"auto"}}>
         <div id="educaionEditContainer" >
-            <input class="educationinputbox" placeholder={selectedEducation?selectedEducation.institute:"Institute name"} id="institute"/>
+            <input class="educationinputbox" placeholder={selectedEducation?selectedEducation.institute:"Route"} id="institute"/>
             <div class="flex">
-            <input class="educationinputbox HW" placeholder={selectedEducation?selectedEducation.starting_year:"Starting year"} id="starting_year"/>
-            <input class="educationinputbox HW" placeholder={selectedEducation?selectedEducation.ending_year:"Eding Year"} id="EdingYear"/>
+            <input class="educationinputbox HW" placeholder={selectedEducation?selectedEducation.starting_year:"Latitude"} id="starting_year"/>
+            <input class="educationinputbox HW" placeholder={selectedEducation?selectedEducation.ending_year:"Longitude"} id="EdingYear"/>
             </div>
-            {!editing?<input class="educationinputbox" placeholder={selectedEducation?selectedEducation.degree:"degree name"} id="degree"/>:
-            <input class="educationinputbox" placeholder={selectedEducation?selectedEducation.degree:"degree name"} id="degree" value={""}/>}
+            {!editing?<input class="educationinputbox" placeholder={selectedEducation?selectedEducation.degree:"Label"} id="degree"/>:
+            <input class="educationinputbox" placeholder={selectedEducation?selectedEducation.degree:"Label"} id="degree" value={""}/>}
         
         </div>
         <div className="Button" onClick={saveEducation} style={{width:"fit-content",marginLeft:"auto"}} id="educaionSaveButton">Save</div>
