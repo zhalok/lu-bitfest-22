@@ -47,15 +47,22 @@ const TitleBar=({page,style,up})=>{
                 <Link to="/signup1" id="title_bar_signup"><b>Sign Up</b></Link> 
             </div>):null}
             
-          
-            <div id="titlebarclientcontainer">
+           { page==="clientPage"?(<div id="titlebarclientcontainer">
             <div id="clienttabs" class="tabcontainer">
                 <Link to="/studentprofile" class="tab">profile</Link>
                 <Link to="/search" class="tab">Search for Bus</Link>
                 
             </div>
             <img src="./pics_icons/profilepic.jpg" id="titlebarimg" onClick={titleImgClick}/>
+            </div>):null}
+            { page==="workerPage"?(<div id="titlebarclientcontainer">
+            <div id="clienttabs" class="tabcontainer">
+                <Link to="/studentprofile" class="tab">profile</Link>
+                <Link to="/search" class="tab">Search for Bus</Link>
+                
             </div>
+            <img src="./pics_icons/profilepic.jpg" id="titlebarimg" onClick={titleImgClick}/>
+            </div>):null}
         </div>
         <LogoutMenu setMenuVis={setMenuVis}/>
         </div>
