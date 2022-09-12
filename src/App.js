@@ -20,6 +20,7 @@ import EstimatedPassenger from './components/Optimal/EstimatedPassenger/Estimate
 import ConsumerRequestPage from './components/ConsumerREquestPage/ConsumerRequestPAge';
 import TransportDemand from './components/TransportDemand/TransportDemand';
 import CreateRoute from './components/UserProfile/CreateRoute';
+import CreateStoppage from './components/UserProfile/CreateStoppage';
 
 function App() {
   const [user,setUser]=useState("f@gmail.com")
@@ -45,6 +46,7 @@ function App() {
         <Route path="/consumerrequest" exact element={<ConsumerRequestPage/>}/>
         <Route path="/transportdemand" exact element={<TransportDemand/>}/>
         <Route path="createroute" exact element={<CreateRoute/>}/>
+        <Route path="/createstoppage" exact element={<CreateStoppage/>}/>
       
         </Routes>
       </Router>

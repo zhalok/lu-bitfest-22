@@ -12,7 +12,7 @@ import EducaionModal from "./Modals/EducationModal";
 
 import axios from "axios";
 
- const UserProfile=()=>{
+ const CreateStoppage=()=>{
     const [profilepic,setProfilePic]=useState("./pics_icons/profilepic.jpg")
     const [name,setName]=useState("Tithi Saha")
     const [location,setLocation]=useState({"latitude":100,"longitude":100,"location":"Madina Market, Sylhet"})
@@ -20,22 +20,22 @@ import axios from "axios";
     const [Educations,setEducations]=useState([{institute:"1234",
                     starting_year:"100",
                     ending_year:"100.65",
-                    degree:"1",id:1, time:"08 AM"
+                    degree:"1",id:1
+                    },
+                    {institute:"3244",
+                    starting_year:"234",
+                    ending_year:"345.65",
+                    degree:"2",id:1
+                    },
+                    {institute:"3413",
+                    starting_year:"164",
+                    ending_year:"232.65",
+                    degree:"3",id:1
                     },
                     {institute:"3543",
                     starting_year:"209.6",
                     ending_year:"124.4",
-                    degree:"2",id:2, time:"10 AM"
-                    },
-                    {institute:"6547",
-                    starting_year:"249.6",
-                    ending_year:"57.4",
-                    degree:"3",id:2, time:"7 AM AM"
-                    },
-                    {institute:"3543",
-                    starting_year:"453",
-                    ending_year:"899",
-                    degree:"4",id:2, time:"04 PM"
+                    degree:"4",id:2
                     }
                 ]);
     const [Services,setServices]=useState([
@@ -84,16 +84,15 @@ import axios from "axios";
                 
                 <div id="educationdiv" class="userinfo">
                     <div class="infotitle">
-                    <img id="locaionicon" src="./pics_icons/location.png"/><b>Route</b>
+                    <img id="locaionicon" src="./pics_icons/location.png"/><b>Stoppages</b>
                         <img id="educationediticon" class="infoediticon pointer" src="./pics_icons/edit.png" onClick={showEducaionModal}/>
                     </div>
                     <div id="educationlist">
                         {Educations.map(Education=>(
                             <div class="educationlistitem">
-                            <div id="educationinstitute">Route: {Education.institute}</div>
+                            <div id="educationinstitute">Route Name: {Education.institute}</div>
                             <div id="educationyear"><b>Label: {Education.degree}</b></div>
                             <div id="educationyear"> <b>Latitude: </b> {Education.starting_year} - <b>Longitude: </b>{Education.ending_year}</div>
-                            <div id="educationyear"><b>Start Time: </b> {Education.time}</div>
                             </div>
                         ))}
                     </div>
@@ -121,4 +120,4 @@ import axios from "axios";
         </div>
     )
  }
- export default UserProfile;
+ export default CreateStoppage;

@@ -40,30 +40,22 @@ const TitleBar=({page,style,up})=>{
         <div id="titlebar container">
         <div id="title_bar" style={style}>
             <div id="Logo">
-                <div id="mms"><b>UTS</b></div>
+                <div id="mms"><b>mms</b></div>
             </div>
            { page==="landing"?(<div id="buttons">
                 <Link to="/login" id="title_bar_login"><b>Log In</b></Link>
                 <Link to="/signup1" id="title_bar_signup"><b>Sign Up</b></Link> 
             </div>):null}
-
-           
-           { page==="clientPage"?(<div id="titlebarclientcontainer">
-            <div id="clienttabs" class="tabcontainer">
-                <Link to="/studentprofile" class="tab">profile</Link>
-                <Link to="/search" class="tab">Search For Bus</Link>
-                
-            </div>
-            <img src="./pics_icons/profilepic.jpg" id="titlebarimg" onClick={titleImgClick}/>
-            </div>):null}
-            { page==="workerPage"?(<div id="titlebarclientcontainer">
+            
+          
+            <div id="titlebarclientcontainer">
             <div id="clienttabs" class="tabcontainer">
                 <Link to="/studentprofile" class="tab">profile</Link>
                 <Link to="/search" class="tab">Search for Bus</Link>
-               
+                
             </div>
             <img src="./pics_icons/profilepic.jpg" id="titlebarimg" onClick={titleImgClick}/>
-            </div>):null}
+            </div>
         </div>
         <LogoutMenu setMenuVis={setMenuVis}/>
         </div>
@@ -72,3 +64,5 @@ const TitleBar=({page,style,up})=>{
 export default TitleBar;
 
 // <img src={up?up:localStorage.getItem("profile_pic")} id="titlebarimg" onClick={titleImgClick}/>
+// <Link to="/search" class="tab">Search for Bus</Link>
+//"./pics_icons/profilepic.jpg"
