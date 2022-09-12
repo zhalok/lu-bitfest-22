@@ -18,6 +18,7 @@ import ClientSearchResult from './components/Client/ClientSearchResult/SearchRes
 import BusAllocation from './components/Optimal/BusAllocation/BusAllocation';
 import EstimatedPassenger from './components/Optimal/EstimatedPassenger/EstimatedPassenger';
 import ConsumerRequestPage from './components/ConsumerREquestPage/ConsumerRequestPAge';
+import TransportDemand from './components/TransportDemand/TransportDemand';
 
 function App() {
   const [user,setUser]=useState("f@gmail.com")
@@ -40,8 +41,8 @@ function App() {
         <Route path="/businvetory" exact element={<BusInventory/>}/>
         <Route path="/busallocation" exact element={<BusAllocation/>}/>
         <Route path="/estimatedpassenger" exact element={<EstimatedPassenger/>}/>
-        <Route path="/clientSearchResult" exact element={<ClientSearchResult/>}/>
         <Route path="/consumerrequest" exact element={<ConsumerRequestPage/>}/>
+        <Route path="/transportdemand" exact element={<TransportDemand/>}/>
       
         </Routes>
       </Router>

@@ -16,11 +16,21 @@
     margin-top: 16px;
     margin-bottom: 16px;
   }
+  .signupinput {
+    width: 75%;
+    border: 2px solid #d4d4d4;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 32px;
+    padding:8px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
-  .rectanglee {
+  .rectangleee {
     display: flex;
     width: 500px;
-    height: 190px;
+    height: 400px;
     background: white;
     border: 2px solid #dedbdb;
     border-radius: 8px;
@@ -56,11 +66,12 @@
     float:left;
   }
 
-  .drivertxt {
-    color: blueviolet;
+  .driverrtxt {
+    color: green;
     font-size: 20px;
     text-align: left;
     margin-left: 0px;
+    margin-bottom: 16px;
     width:240px;
     float:left;
   }
@@ -80,14 +91,6 @@
     text-align: left;
     margin-left: 1px;
 
-  }
-
-  #clientshiretxt {
-    font-size: 36px;
-    font-weight: bold;
-    color: rgb(186, 184, 181);
-    margin-top: 16px;
-    margin-bottom: 16px;
   }
  
   .activebutton {
@@ -143,4 +146,21 @@
   }
   .deleteimg:hover {
     border: 2px solid white;
+  }
+
+  .endbutton {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+    margin: auto;
+    border:1px solid green
+  }
+  .endbutton:hover {
+    background-color: white;
+    color: green;
+    border: 1px solid green;
   }

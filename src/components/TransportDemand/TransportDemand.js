@@ -1,11 +1,11 @@
 import React, { Component, useEffect, useState } from "react";
-import Footer from "../../common/footer/Footer";
-import TitleBar from "../../common/Title_bar";
+import Footer from "../common/footer/Footer";
+import TitleBar from "../common/Title_bar";
 
 import "./style.css"
 import axios from "axios";
 
- const EstimatedPassenger=()=>{
+ const TransportDemand=()=>{
     /*const [licnse,setLicense]=useState("1234")
     const [codeName,setCodeName]=useState("A-001")
     const [location,setLocation]=useState({"latitude":100,"longitude":100,"location":"Madina Market, Sylhet"})
@@ -20,7 +20,7 @@ import axios from "axios";
                     },
                 ]);*/
 
-    const [passengers, setPassengers]=useState(
+    const [demands, setDemands]=useState(
         [
             {
                 route: "Amborkhana",
@@ -28,7 +28,8 @@ import axios from "axios";
                 role:{
                 student: "30",
                 Teacher: "10",
-                Staff: "8"
+                Staff: "8",
+                others:"Null"
                 }
                 
            
@@ -39,7 +40,8 @@ import axios from "axios";
             role:{
             student: "5",
             Teacher: "1",
-            Staff: "2"
+            Staff: "2",
+            others:"80"
             }
             
        
@@ -50,7 +52,8 @@ import axios from "axios";
         role:{
         student: "20",
         Teacher: "5",
-        Staff: "3"
+        Staff: "3",
+        others:"Null"
         }
         
    
@@ -61,7 +64,9 @@ import axios from "axios";
     role:{
     student: "25",
     Teacher: "8",
-    Staff: "12"
+    Staff: "12",
+    others:"Null"
+
     }
     
 
@@ -74,7 +79,7 @@ import axios from "axios";
      useEffect(()=>{
         axios.get(`http://localhost:3001/${type}?role=${localStorage.getItem("role")}`).then(res=>{
             const data=res.data.user_data;
-            setPassengers(data.passengers)
+            setDemands(data.demands)
 
             console.log(data)
         })
@@ -84,26 +89,27 @@ import axios from "axios";
         <div>
         <TitleBar page="clientPage"/>
             <div id="hire">
-                <div id="clientshiretxt">Estimated Number of Passengers</div>
+                <div id="clientshiretxt">Transport Demands</div>
         
               
-                        {passengers.map(passenger=>(
-                            <div className="rectanglee" >
+                        {demands.map(demand=>(
+                            <div className="rectangleee" >
             
-                            <div class="recttxt"><b>Location: </b> {passenger.route} <br/>
+                            <div class="recttxt"><b>Route: </b> {demand.route} <br/>
 
-                                <div class="recttxt"><b>Timeslot: </b>{passenger.timeSlot}</div><br/><br/>
-                                <div class="drivertxt"><b>Number of passengers</b></div>
-                                <div class="recttxt"><b>Student: </b>{passenger.role.student}</div>
-                                <div class="recttxt"><b>Teacher: </b>{passenger.role.Teacher}</div>
-                                <div class="recttxt"><b>Staff: </b>{passenger.role.Staff}</div>
+                                <div class="recttxt"><b>Timeslot: </b>{demand.timeSlot}</div><br/><br/>
+                                <div class="driverrtxt"><b>Transport Demand</b></div>
+                                <input type="name" class="signupinput" id="name" placeholder="For Students"/>
+                                <input type="name" class="signupinput" id="name" placeholder="For Teachers"/>
+                                <input type="name" class="signupinput" id="name" placeholder="For Staffs"/>
+                                <input type="name" class="signupinput" id="name" placeholder="For Others"/>
                             </div>
                             
                             
                         </div>
                         ))}
                     
-                
+                    <button class="endbutton">Save</button>
                
             </div>
             <Footer/>
@@ -111,4 +117,4 @@ import axios from "axios";
         </div>
     )
  }
- export default EstimatedPassenger;
+ export default TransportDemand;
