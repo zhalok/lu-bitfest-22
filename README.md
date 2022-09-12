@@ -72,7 +72,7 @@ demand for transit for the maximum number of consumers.
                 - [x] Label
                 - [x] Latitude & Longitude
             - [x] Start time
-        - [ ] Create/Update stoppages with the following information **[Nice to have | 2 points]**
+        - [x] Create/Update stoppages with the following information **[Nice to have | 2 points]**
             - [ ] Route number
             - [ ] Label
             - [ ] Latitude & Longitude
@@ -124,17 +124,17 @@ demand for transit for the maximum number of consumers.
         - [x] [A sample routine can be downloaded from this link]
             - [ ] [Class Routine](https://docs.google.com/spreadsheets/d/1kGY1XLjjdDOeFdTLzxgmQYZtLyKaBOshsJ_6pq0TrwU/edit#gid=712672084)
             - [ ] [Exam Routine](https://docs.google.com/spreadsheets/d/1_E9bvZpGL41k3m40PBvWd9l3NCgR0RQn/edit#gid=329530890)
-    - [ ] Ability to view the location of a bus with estimated arrival time **[Nice to have | 15 points]**
+    - [x] Ability to view the location of a bus with estimated arrival time **[Nice to have | 15 points]**
     - [x] View information about the transport **[Mandatory feature | 5 points]**
         - [x] Which buses are allocated in a specific route & timeslot
         - [x] Codename or sequence of the buses
 
 3. Prepare a dummy dataset with the following requirements **[Mandatory feature | 7 points]**
-    - [ ] 4 transport routes
-    - [ ] 10 buses
+    - [x] 4 transport routes
+    - [x] 10 buses
         - [ ] Capacity: 50; Quantity: 5
         - [ ] Capacity: 35; Quantity: 10
-    - [ ] 10K students distributed into
+    - [x] 10K students distributed into
         - [ ] 7 departments
             - [ ] CSE
             - [ ] EEE
@@ -146,5 +146,5 @@ demand for transit for the maximum number of consumers.
         - [ ] 56 batches
             - [ ] 8 batches per department
             - [ ] 2 - 5 sections per batch
-    - [ ] 100 teachers distributed into the 7 departments (mentioned above)
-    - [ ] 50 staffs
+    - [x] 100 teachers distributed into the 7 departments (mentioned above)
+    - [x] 50 staffs
