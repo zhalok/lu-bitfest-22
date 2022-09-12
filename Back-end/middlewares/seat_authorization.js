@@ -8,6 +8,7 @@ const user_authorization = (req, res, next) => {
     return;
   }
   const decoded_token = validate_token(token);
+  console.log(decoded_token);
   if (decoded_token) {
     if (
       decoded_token.type == "student" ||

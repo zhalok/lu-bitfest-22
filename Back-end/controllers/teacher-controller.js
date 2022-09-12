@@ -71,7 +71,7 @@ teacher_controller.authentication = async (req, res, next) => {
               email,
               username,
               role,
-              type: "user",
+              type: "teacher",
             });
             res.status(200).json({ message: "User Authenticated", token });
           } else {

@@ -49,8 +49,9 @@ admin_controller.authentication = async (req, res, next) => {
         if (err) next(err);
         else {
           if (validity) {
-            const { name, contact, email, username, role } = data[0];
+            const { name, contact, email, username, role, _id } = data[0];
             const token = generate_token({
+              _id,
               name,
               contact,
               email,
